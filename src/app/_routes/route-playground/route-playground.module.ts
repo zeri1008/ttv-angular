@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RoutePlaygroundComponent } from './route-playground.component';
 import { HeaderModule } from '../../_components/header/header.module';
 import { SidebarModule } from '../../_components/sidebar/sidebar.module';
+import { PlaygroundHomeModule } from './playground-home/playground-home.module';
 
 
 
@@ -13,7 +14,8 @@ import { SidebarModule } from '../../_components/sidebar/sidebar.module';
   imports: [
     CommonModule,
     HeaderModule,
-    SidebarModule
+    SidebarModule,
+    PlaygroundHomeModule
   ]
 })
 export class RoutePlaygroundModule { }

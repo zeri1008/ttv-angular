@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouteMainModule } from './_routes/route-main/route-main.module';
 import { RoutePlaygroundModule } from './_routes/route-playground/route-playground.module';
+import { RouteGalleryModule } from './_routes/route-gallery/route-gallery.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { RoutePlaygroundModule } from './_routes/route-playground/route-playgrou
     BrowserModule,
     AppRoutingModule,
     RouteMainModule,
-    RoutePlaygroundModule
+    RoutePlaygroundModule,
+    RouteGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
