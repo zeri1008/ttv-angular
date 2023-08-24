@@ -7,16 +7,16 @@ import { RouteGalleryComponent } from './_routes/route-gallery/route-gallery.com
 const routes: Routes = [
   {
     path: '',
-    component: RoutePlaygroundComponent
+    component: RoutePlaygroundComponent,
   },
   {
     path: 'gallery',
-    component: RouteGalleryComponent
-  }
+    component: RouteGalleryComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
