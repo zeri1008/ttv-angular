@@ -1,9 +1,12 @@
-<header>
+<div class="relative vbhox h(100vh) clip user-select-none">
+  <header>
     <app-header></app-header>
-</header>
-<div class="display(flex) h(100%) w(100%)">
-    <app-sidebar></app-sidebar> 
-    <app-playground-home class="w(100%)"></app-playground-home>   
+  </header>
+  <div class="hbox h(100%) w(100%)">
+    <app-sidebar class="h(100%)"></app-sidebar>
+    <app-playground-home
+      class="relative w(calc(100vw-270px)) h(100%)"
+    ></app-playground-home>
     <!-- Mark : 이거 width 100% 채우면 헤더 범위 벗어나는데 이 부분 수정 부탁드립니다,,, -->
+  </div>
 </div>
-
