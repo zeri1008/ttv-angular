@@ -29,7 +29,8 @@
   </div>
 
   <div class="hbox">
-    <div class="hbox mr(50)">
+    <div class="hbox mr(50) pointer"
+        (click)="onClickDropBox('language')" >
       <div>
         <svg
           width="24"
@@ -57,22 +58,26 @@
             />
           </defs>
         </svg>
+        <app-islanguage *ngIf="isLanguage" class="fixed mt(30)"></app-islanguage>
       </div>
+      
       <div class="ml(10px)"><p class="c(#FFFFFF)">English</p></div>
       <div class="ml(10px)">
         <svg
-          width="10"
-          height="10"
-          viewBox="0 0 10 10"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line x1="0" y1="2" x2="5" y2="8" stroke="white" stroke-width="1" />
-          <line x1="5" y1="8" x2="10" y2="2" stroke="white" stroke-width="1" />
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="2" x2="5" y2="8" stroke="white" stroke-width="1" />
+        <line x1="5" y1="8" x2="10" y2="2" stroke="white" stroke-width="1" />
         </svg>
       </div>
+      
     </div>
 
-    <div class="hbox mr(20)">
+    
+    <div class="hbox mr(20)" 
+      (click)="onClickDropBox('profile')">
       <div class="block w(45) h(45) bg(#FF0000)"></div>
       <div class="ml(10px)">
         <svg
@@ -85,6 +90,9 @@
           <line x1="5" y1="8" x2="10" y2="2" stroke="white" stroke-width="1" />
         </svg>
       </div>
+      <app-isprofile *ngIf="isProfile" class="fixed"></app-isprofile>
     </div>
+    
+
   </div>
 </div>
