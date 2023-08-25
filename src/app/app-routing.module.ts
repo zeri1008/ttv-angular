@@ -7,6 +7,10 @@ import { RouteGalleryComponent } from './_routes/route-gallery/route-gallery.com
 const routes: Routes = [
   {
     path: '',
+    component: RouteMainComponent,
+  },
+  {
+    path: 'playground',
     component: RoutePlaygroundComponent,
   },
   {
