@@ -1,83 +1,135 @@
-<div class = "bg(#1A1A1A) w(100%) h(100%) scrollbar scroll-y ">
-
-    <div class = "w(455) h(66) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) ml(85) mt(65) font(30) Inter semi bold c(white) pack">
-        <p>Generate</p>
+<div class="right-sidebar">
+  <div class="vbox gap(30) w(100%) h(100%) p(30)">
+    <div
+      class="w(300) h(60) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(25) Inter semi bold c(white) pack"
+    >
+      <p>Generate</p>
     </div>
-
-    <div>
-        <div class = " w(75) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Model</p>
-        </div>
-        <div class = " ml(85) mt(10) h(47) ">
-            <form>
-                <select name = "Appia" class = "bg(#4B4B4B) w(455) h(47) r(10) font(20) Inter semi bold c(white) b(0)">
-                    <option value = "none" ><p> ==선택==</p></option>
-                    <option value = "one" ><p> 1</p></option>
-                    <option value = "two"><p> 2</p></option>
-                    <option value = "three"><p> 3</p></option>
-                </select>
-             </form>
-        </div>
+    <div class="w(75) h(30) font(25) Inter semi bold c(white)">
+      <p>Model</p>
     </div>
-    
-
-    <div>
-        <div class = "w(90) h(30) ml(85) mt(23) font(25) Inter semi bold c(white)">
-            <p>Prompt</p>
-        </div>
-        <input type = "text" class = " font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) ml(85) mt(13) r(10) b(0)">
+    <div class="h(40)">
+      <form>
+        <select
+          class="bg(#4B4B4B) w(300) h(47) r(10) font(15) bold c(white) p(8)"
+        >
+          <option value="none"><p>==선택==</p></option>
+          <option value="one"><p>1</p></option>
+          <option value="two"><p>2</p></option>
+          <option value="three"><p>3</p></option>
+        </select>
+      </form>
     </div>
-    
-
-    <div>
-        <div class = " ml(85) mt(23) font(25) Inter semi bold c(white)">
-            <p>Negative prompt</p>
-        </div>
-        <input type = "text" class = "font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)">
-    </div>
-
-    <div>
-        <div class = " w(188) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Guidance Scales</p>
-        </div>
-        <input type = "text" class = "font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)">
-    </div>
-
-    <div>
-        <div class = "w(70) h29 ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Steps</p>
-        </div>
-        <input type = "text" class = "font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)">
-    </div>
-
-    <div>
-        <div class = "w(124) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Scheduler</p>
-        </div>
-        <input type = "text" class = "font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)">
-    </div>
-
-    <div>
-        <div class ="w(62) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Seed</p>
-        </div>
-        <input type = "text" class = "font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)">
-    </div>
-
-    <div>
-        <div class = "w(316) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-            <p>Size (min:512, max:1024)</p>
-        </div>
-        <div class = "hbox mb(30)">
-            <div class = "w(76) h(29) ml(85) mt(12) font(25) Inter semi bold c(white)">
-                <p>width:</p>
-            </div>
-            <input type = "text" class = "w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)">
-            <div class = "w(85) h(29) ml(20) mt(12) font(25) Inter semi bold c(white)">
-                <p>height:</p>
-            </div>
-            <input type = "text" class = "w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)">
-        </div>
-    </div>
-
+  </div>
 </div>
+
+<!-- <div
+  class="bg(#1A1A1A) absolute(~0,0) vbox gap(30) w(100%) h(800) scrollbar scroll-y"
+>
+  <div
+    class="w(455) h(66) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(30) Inter semi bold c(white) pack"
+  >
+    <p>Generate</p>
+  </div>
+
+  <div>
+    <div class="w(75) h(30) font(25) Inter semi bold c(white)">
+      <p>Model</p>
+    </div>
+    <div class="h(47)">
+      <form>
+        <select
+          name="Appia"
+          class="bg(#4B4B4B) w(455) h(47) r(10) font(20) Inter semi bold c(white) b(0)"
+        >
+          <option value="none"><p>==선택==</p></option>
+          <option value="one"><p>1</p></option>
+          <option value="two"><p>2</p></option>
+          <option value="three"><p>3</p></option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <div class="w(90) h(30) font(25) Inter semi bold c(white)">
+      <p>Prompt</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) ml(85) mt(13) r(10) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="ml(85) mt(23) font(25) Inter semi bold c(white)">
+      <p>Negative prompt</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="w(188) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Guidance Scales</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="w(70) h29 ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Steps</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="w(124) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Scheduler</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="w(62) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Seed</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+  </div>
+
+  <div>
+    <div class="w(316) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Size (min:512, max:1024)</p>
+    </div>
+    <div class="hbox mb(30)">
+      <div class="w(76) h(29) ml(85) mt(12) font(25) Inter semi bold c(white)">
+        <p>width:</p>
+      </div>
+      <input
+        type="text"
+        class="w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+      />
+      <div class="w(85) h(29) ml(20) mt(12) font(25) Inter semi bold c(white)">
+        <p>height:</p>
+      </div>
+      <input
+        type="text"
+        class="w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+      />
+    </div>
+  </div>
+</div> -->
