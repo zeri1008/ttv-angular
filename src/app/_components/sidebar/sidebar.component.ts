@@ -12,4 +12,12 @@ export class SidebarComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+  
 }
+

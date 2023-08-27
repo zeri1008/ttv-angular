@@ -18,4 +18,19 @@ export class HeaderComponent implements OnInit {
   onClickRouter(url: string) {
     this.router.navigate([url]);
   }
+
+  isLanguage: boolean = false;
+  isProfile: boolean = false;
+
+  onClickDropBox(type: string): void {
+    if (type === 'language') {
+      this.isLanguage = !this.isLanguage;
+      this.isProfile = false;
+    } else if (type === 'profile') {
+      this.isProfile = !this.isProfile;
+      this.isLanguage = false; 
+    }
+  }
+
+  
 }

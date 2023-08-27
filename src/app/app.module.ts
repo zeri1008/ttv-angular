@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { RouteMainModule } from './_routes/route-main/route-main.module';
 import { RoutePlaygroundModule } from './_routes/route-playground/route-playground.module';
 import { RouteGalleryModule } from './_routes/route-gallery/route-gallery.module';
+import { ImgRightbarComponent } from './_components/img-rightbar/img-rightbar.component';
 
 @NgModule({
   declarations: [
     AppComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -22,3 +24,4 @@ import { RouteGalleryModule } from './_routes/route-gallery/route-gallery.module
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
