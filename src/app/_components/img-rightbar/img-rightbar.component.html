@@ -1,4 +1,4 @@
-<div class="right-sidebar">
+<div class="right-sidebar ">
   <div class="vbox gap(30) w(100%) h(100%) p(30)">
     <div
       class="w(300) h(60) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(25) Inter semi bold c(white) pack"
@@ -11,7 +11,7 @@
     <div class="h(40)">
       <form>
         <select
-          class="bg(#4B4B4B) w(300) h(47) r(10) font(15) bold c(white) p(8)"
+          class="bg(#4B4B4B) w(300) h(50) r(10) font(15) bold c(white) p(8)"
         >
           <option value="none"><p>==선택==</p></option>
           <option value="one"><p>1</p></option>
@@ -20,8 +20,69 @@
         </select>
       </form>
     </div>
+
+    <div class="font(25) Inter semi bold c(white)"><p>Prompt</p></div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(300) h(150) bg(#4B4B4B) r(10) b(0)"
+    />
+    <div class=" font(25) Inter semi bold c(white)">
+      <p>Negative prompt</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(300) h(150) bg(#4B4B4B) r(10)  b(0)"
+    />
+    <div class="font(25) Inter semi bold c(white)">
+      <p>Guidance Scales</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10)  b(0)"
+    />
+    <div class=" font(25) Inter semi bold c(white)">
+      <p>Steps</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(455) h(50) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+    />
+    <div class="font(25) Inter semi bold c(white)">
+      <p>Scheduler</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10) b(0)"
+    />
+    <div class="w(62) h(30) font(25) Inter semi bold c(white)">
+      <p>Seed</p>
+    </div>
+    <input
+      type="text"
+      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10)  b(0)"
+    />
+    <div class="w(316) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+      <p>Size (min:512, max:1024)</p>
+    </div>
+    <div class="hbox mb(30)">
+      <div class="w(76) h(29) ml(85) mt(12) font(25) Inter semi bold c(white)">
+        <p>width:</p>
+      </div>
+      <input
+        type="text"
+        class="w(128) h(46) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+      />
+      <div class="w(85) h(29) ml(20) mt(12) font(25) Inter semi bold c(white)">
+        <p>height:</p>
+      </div>
+      <input
+        type="text"
+        class="w(128) h(46) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+      />
+
   </div>
 </div>
+
 
 <!-- <div
   class="bg(#1A1A1A) absolute(~0,0) vbox gap(30) w(100%) h(800) scrollbar scroll-y"
