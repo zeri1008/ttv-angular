@@ -9,15 +9,19 @@ export class SidebarComponent implements OnInit {
   @ViewChild('VideoList') videoListRef: ElementRef;
   @ViewChild('ImageList') ImageListRef: ElementRef;
 
-  constructor() {}
+  menuType: string;
+
+  constructor() {
+    this.menuType = '';
+  }
 
   ngOnInit(): void {}
 
   isMenuOpen = false;
 
-  toggleMenu() {
+  toggleMenu(menuType: string) {
+    this.menuType = menuType;
     this.isMenuOpen = !this.isMenuOpen;
   }
-  
 }
 
