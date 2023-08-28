@@ -1,5 +1,5 @@
 <aside class="vbox w(270) h(100%) bg(black) p(20)">
-  <div class="vbox w(230) r(10) items pointer " (click)="toggleMenu()">
+  <div class="vbox w(230) r(10) items pointer " (click)="toggleMenu('videos')">
     <div class="hbox space-between w(100%) p(10)">
       <span class="font(20) Inter c(#fff)">VIDEOS<br /></span>
       <svg
@@ -12,7 +12,7 @@
         <path d="M6.5 12L0.00480938 0.75L12.9952 0.75L6.5 12Z" fill="white" />
       </svg>
     </div>
-    <div class="vbox(left) w(100%) ml(30) gap(3)" #VideoList *ngIf="isMenuOpen">
+    <div class="vbox(left) w(100%) ml(30) gap(3)" #VideoList *ngIf="isMenuOpen && menuType === 'videos'">
       <li class="color(grey) font(18)" style="list-style: none">
         - Text to Video
       </li>
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="vbox w(230) r(10) items pointer" (click)="toggleMenu()">
+  <div class="vbox w(230) r(10) items pointer" (click)="toggleMenu('images')">
     <div class="hbox space-between w(100%) p(10)">
       <span class="font(20) Inter c(#fff)">IMAGES<br /></span>
       <svg
@@ -35,7 +35,7 @@
         <path d="M6.5 12L0.00480938 0.75L12.9952 0.75L6.5 12Z" fill="white" />
       </svg>
     </div>
-    <div class="vbox(left) w(100%) ml(30) gap(3)" #ImageList *ngIf="isMenuOpen">
+    <div class="vbox(left) w(100%) ml(30) gap(3)" #ImageList *ngIf="isMenuOpen && menuType === 'images'">
       <li class="color(grey) font(18)" style="list-style: none">
         - Text to Image
       </li>
