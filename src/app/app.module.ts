@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { RouteMainModule } from './_routes/route-main/route-main.module';
 import { RoutePlaygroundModule } from './_routes/route-playground/route-playground.module';
 import { RouteGalleryModule } from './_routes/route-gallery/route-gallery.module';
-import { ImgRightbarComponent } from './_components/img-rightbar/img-rightbar.component';
+import { RouteBoardsModule } from './_routes/route-boards/route-boards.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { ImgRightbarComponent } from './_components/img-rightbar/img-rightbar.co
     AppRoutingModule,
     RouteMainModule,
     RoutePlaygroundModule,
-    RouteGalleryModule
+    RouteGalleryModule,
+    RouteBoardsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
