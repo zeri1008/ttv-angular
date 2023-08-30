@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RouteMainComponent } from './_routes/route-main/route-main.component';
 import { RoutePlaygroundComponent } from './_routes/route-playground/route-playground.component';
 import { RouteGalleryComponent } from './_routes/route-gallery/route-gallery.component';
+import { RouteBoardsComponent } from './_routes/route-boards/route-boards.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
     path: 'gallery',
     component: RouteGalleryComponent,
   },
+
+  {
+    path: 'boards',
+    component: RouteBoardsComponent,
+  }
 ];
 
 @NgModule({
