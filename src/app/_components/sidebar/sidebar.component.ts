@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +12,9 @@ export class SidebarComponent implements OnInit {
 
   menuType: string;
 
-  constructor() {
+  constructor(
+    private router: Router,
+  ) {
     this.menuType = '';
   }
 
@@ -22,6 +25,10 @@ export class SidebarComponent implements OnInit {
   toggleMenu(menuType: string) {
     this.menuType = menuType;
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  onClickRouter(url: string) {
+    this.router.navigate([url]);
   }
 }
 
