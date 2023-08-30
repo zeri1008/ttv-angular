@@ -1,10 +1,11 @@
 <div class="relative vbhox h(100vh) clip user-select-none">
-  <header>
-    <app-header></app-header>
-  </header>
+  <app-header></app-header>
+
   <div class="hbox h(100%) w(100%)">
     <app-sidebar class="h(100%)"></app-sidebar>
-    <app-playground-home class="relative w(calc(100vw-270px)) h(100%)" ></app-playground-home>
-    <!-- <app-text-to-image class="w(100%) h(100%)"></app-text-to-image>  -->
+
+    <div class="relative w(calc(100vw-270px)) h(100%) bg(#1a1a1a)">
+      <ng-template #content></ng-template>
+    </div>
   </div>
 </div>
