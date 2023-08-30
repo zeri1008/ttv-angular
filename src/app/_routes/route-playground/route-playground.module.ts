@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RoutePlaygroundComponent } from './route-playground.component';
 import { HeaderModule } from '../../_components/header/header.module';
 import { SidebarModule } from '../../_components/sidebar/sidebar.module';
-import { ImgRightbarModule } from 'src/app/_components/img-rightbar/img-rightbar.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,7 @@ import { ImgRightbarModule } from 'src/app/_components/img-rightbar/img-rightbar
   imports: [
     CommonModule,
     HeaderModule,
-    SidebarModule,
+    SidebarModule
   ]
 })
 export class RoutePlaygroundModule { }
