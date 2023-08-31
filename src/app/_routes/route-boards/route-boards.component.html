@@ -1,94 +1,137 @@
-<div class="relative vhbox h(100vh) clip user-select-none">
-    <header>
-      <app-header></app-header>
-    </header>
-    <div class=" h(100%) w(100%) bg(black) pack scroll">
-        <div class="vbox gap(50)">
-            <div class="pack">
-                <input type="text" class=" mt(500) w(500) h(60) bg(#2C2C2C) r(10) b(0) ">
+    <div class="relative vhbox h(100vh) clip user-select-none">
+        <header>
+        <app-header></app-header>
+        </header>
+        <!-- <div class=" h(100%) w(100%) bg(black) pack scroll">
+            <div class="vbox gap(50)">
+                <div class="pack">
+                    <input type="text" class=" mt(500) w(500) h(60) bg(#2C2C2C) r(10) b(0) ">
 
-            </div>
-
-
-            <div  class="hbox space-between">
-                <div class="hbox">
-                    <svg width="20" height="20" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="26" height="25" fill="url(#pattern0)"/>
-                        <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_559_2763" transform="matrix(0.015625 0 0 0.01625 0 -0.02)"/>
-                        </pattern>
-                        <image id="image0_559_2763" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAQAAABQ8GUWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFgYrCYm2+2cAAAIaSURBVHja7ZkxagJBFIbf6IIWq21Ea7t4ggipPYB6hxTBThOvEUHBXENsPIDYippGCEkuINjJ/CmmEEl0d3ZnHF3fB1Y6M+/73/iKXSKGYRiGYRiGYZgbRLguQAfIXI7E8zPR/T0hnda39TyicpkokyEajYRotVw7ach7HuRsBqOMx669NAKoVs3KA8Bul3ItFhoBmN80wt/IFZCeB0ynpu/AlQ1B31dDsFIJHIIimyV6fCTK513XfXYg7+6A+TzMDXBdq1P5xAWgK5+oAALl5WSS2ACCOz8cAo1GIgMIJ59KQdbrZwsAaDYh39+BbhfS963Jo1CAXC6Pyw8GgBAqqDMEAAgB9PuHRywWQKHgUv4sASj5Xu//Yj4+gGLR2Fkhr/3hGosBnJY3G0IUeasBhJM3E0JUeWsB6MnHCyGOvJUAlPxgcLygzeboV3K51BmMugPPegDBnV+tgFIJeHuLexPidn5f88PD37Xf35bklZj6bfQQTMmrvf57ntBuW5M/XKMfgkn5/Z6+D7y+AsMhZL1uXT5qCDbkYxFHXjeEC5U/Me01JnqovWJOewvy8Tqvv+dFdd6sfPQQEiSvH0IC5cOflWD54DOveNpHO/vlBfj5UZ9O5+qn/dVw0/IqgE7HxbW/GICvr5vs/D6A9fpm5VUAT0+H8nYeY18q6qUBajWiWo3o85Oo3xdiu3VdGMMwDMMwDMMwDGORX/6t8VTXxHg3AAAAAElFTkSuQmCC"/>
-                        </defs>
-                    </svg>
-                    <p class="ml(10) mr(15) font(20) c(white) Inter Regular">Trending</p>
-                    <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="26" height="26" fill="url(#pattern0)"/>
-                        <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_559_2766" transform="scale(0.03125)"/>
-                        </pattern>
-                        <image id="image0_559_2766" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAQAAACJ4248AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFgYsCcb3baAAAAMySURBVFjDvVc9SytREJ3dIiu4gqAxpjMiZoMpUkoeiomd2Cr6E/RHhBBQ/AcS/Al+gIV2LiQmioVIVLBzjaAgaYQkoBZzXjFu9vk0ZnfzngMpcu+dM2fOvXfurEIuDdzXR8r8PCGVIiWRIBoZIervl9nnZyLLIlQqpJgm4eBAUet1t9jfB0Y4DGxuAs0mXFuzCd7aAo+N+Q/MmgbkcuBGwwE+PwcyGWBmBjAMoLdXfoYhY5mMrLHt7Q3Y2ABrmsesh4eBkxMBYQa2t4Fo1L1/NArs7IgvAJTL4FDIZebxOHB/L463t8DkpP/tSyYByxKsahUcj3cIHgo5wUsl8NCQ7z1skRgYAEzTIdFGCaCnx5G9UAAHAp3BxTqrGggAhYKT2BdnAsjlWrLz4KC77NwREBLBoGwpAF5f/wsoHJbTzuxlz70QkPXJpMR4fQVGR/+Y2NwUqO1tt2B+CIgSu7vilc+/D/T1SZFh9nLVfBNALCbb0GiAdZ2A5WW7yHgB8ktAkr64EM/FRZWQSsnw/r5XIN+m2LHSaVUeFiKiYvHHCNixkEiohEhE/jw+/hyBhwdRIhIhuRIAWNe9wrTeHI8VE6zr4vjyojrDiuI9k+trcT068kZCdeKCazXJYnzcswIcDAKXl+J/cwOEw+6Ui0ZFgacnAs7O5I99G/4/CSCdlvWnpyqhUpHhqSk/BBS1ViPMzhJdXZFiGATT7ExielqcKxUClpb8FiK/SrQKES8sdFWKPwMPDQFXV5LQ6urX8r+XYtTrQG/vu+PWlgzu7HRDwCGxstJ2Hnt7Hx4jcRobkwaSGUgmuyXRPvivX/b9h10AncmNDZm0LHAw+M+DczAI3N1JjLW1LxZoGlAue2nJ3AcPBIBiUbCPj9tiS1NarTq9m8tW+lvZXTalDol43CFxe9vNmZA9t2WvVoGJCZeShUJAqdT6MOHdXSAWcx84FnNOuy27xxYfrGng9fXWawlACkg2K6XUMMC6Li+bYchYNut0O4D4rq11dZ6A0VEgn//4jdjJ6nUgn/901b4w108wWNdJmZsjSqcJiQQpkciHz3NYFikXFwTTJOXwUFGaTTe4vwHvCd68eFNxnAAAAABJRU5ErkJggg=="/>
-                        </defs>
-                    </svg>
-                    <p class="ml(10) font(20) c(white) Inter Regular">Recent</p> 
                 </div>
-                  
-            
 
-                <div class="hbox pack w(110) h(40) bg(linear-gradient(92.34deg,#7350ec/0%,#7b63d9/20.31%,#9558db/50.52%,#ad71e7/78.12%,#d5c8fe.88/98.96%)) r(9)">           
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <rect width="20" height="20" fill="url(#pattern0)"/>
-                        <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_559_2771" transform="scale(0.0416667)"/>
-                        </pattern>
-                        <image id="image0_559_2771" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYEAQAAAAa7ikwAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFwAbGxl4pwsAAALGSURBVEjHtZVPSNNhGMef3+YmIkQEkqjMg52EFUl3y0AQuoh/KClvIxS7JGM3GUwKT4UNh4geOusQPBR40f7gRdsgBg4dmh7cWLNBkMXs+XR4ybU2bZa9px/v+3s+39/zPN/n/Yn8h4WeOwdjY7C9fbZgbDa0vx/29gBgff0M4TduQDTK0fr6FcJh27+Dm5ogHBaZnRVyObP74YPI/LxILPbXAlBdDX6/SDQqkk6LBAJiXb0qcngo0tcnUlcnEov9BdhuRz0eSCbh5Utobkbv34dcDgD1es17Hz+ily+fEn79OhqJQDyO9vSIiBj4/j7E4/DiBVgW1NZCLodWVpYHVpcLnj83IJ8PdTqN4MOHZi8UMhnV1pr9trayHPSzzvD5M0xOojU1eVGvF1IptLsbslm4eTMf9+ABOjd3AvgXP+viIup2F577fJBMoteuGWuOjBSeh0IQCJRd58Jzv98MUnMzOjUFS0tgtxe+8+oV3L5dVp0LAwMB2NlBL12C3l5IpaCurrhn6fRR1ifVOQ+2LHjyBLa3zWA1NcGnT2h7ezH84sUCB6GJBHz/DsPDpb/asiAYhI0N1OVCKythbQ199Kh0iX9zEOp2w+PH6OamKc/MDHR0oA4H2GwwOQnr61BfbwDj4/DmDVpRUVJAh4bM1VFSvaUlL5bJoCsrEIvl/d3ZaSbU5TregRMTxzqoSEwjERgczJtgfx+6uk6OW16GO3f+KGCgHg+8fm2evV5z32Qyv5axtIPKvIPg/Hn48sW4JhiE0VFTxrdv4fCwsGdOZ5GDRKTiJAHLymZhYUHk7l2RxkYhGhVxOMRyu0VaW0UODkR6eoRnz8S6cEFYXRVJJCzbt29lZWBSvnXLNP39e/TePdjdhYGBYw3C8HDZcCPgcJiJVYWtLXR6+lSA8nrx9Kn5mbx7B1VVZy+gV66giQTa0HDa2B/eyKeXlAkgsQAAAABJRU5ErkJggg=="/>
-                        </defs>
-                    </svg>
-                    <p class="c(white) Inter Regular font(20) ml(10)">Post</p>
-                  
-                  </div>
-            </div>
 
-            <div class="w(1000) h(250) bg(#2C2C2C) r(10) p(20)">
-                <div class="hbox">
-                    <div class="w(55) h(55) r(50) bg(#D9D9D9) "></div>
-                    <div class="vbox gap(15) ml(15)">
-                        <p class=" c(#ACACAC) font(20) Inter Medium">name</p>
-                        <p class="c(white) font(25) Inter Medium">tittle</p>
-                        <p class="c(#ACACAC) font(20) Inter Medium">본문...</p>
+                <div  class="hbox space-between">
+                    <div class="hbox">
+                        <svg width="20" height="20" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="26" height="25" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_559_2763" transform="matrix(0.015625 0 0 0.01625 0 -0.02)"/>
+                            </pattern>
+                            <image id="image0_559_2763" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAQAAABQ8GUWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFgYrCYm2+2cAAAIaSURBVHja7ZkxagJBFIbf6IIWq21Ea7t4ggipPYB6hxTBThOvEUHBXENsPIDYippGCEkuINjJ/CmmEEl0d3ZnHF3fB1Y6M+/73/iKXSKGYRiGYRiGYZgbRLguQAfIXI7E8zPR/T0hnda39TyicpkokyEajYRotVw7ach7HuRsBqOMx669NAKoVs3KA8Bul3ItFhoBmN80wt/IFZCeB0ynpu/AlQ1B31dDsFIJHIIimyV6fCTK513XfXYg7+6A+TzMDXBdq1P5xAWgK5+oAALl5WSS2ACCOz8cAo1GIgMIJ59KQdbrZwsAaDYh39+BbhfS963Jo1CAXC6Pyw8GgBAqqDMEAAgB9PuHRywWQKHgUv4sASj5Xu//Yj4+gGLR2Fkhr/3hGosBnJY3G0IUeasBhJM3E0JUeWsB6MnHCyGOvJUAlPxgcLygzeboV3K51BmMugPPegDBnV+tgFIJeHuLexPidn5f88PD37Xf35bklZj6bfQQTMmrvf57ntBuW5M/XKMfgkn5/Z6+D7y+AsMhZL1uXT5qCDbkYxFHXjeEC5U/Me01JnqovWJOewvy8Tqvv+dFdd6sfPQQEiSvH0IC5cOflWD54DOveNpHO/vlBfj5UZ9O5+qn/dVw0/IqgE7HxbW/GICvr5vs/D6A9fpm5VUAT0+H8nYeY18q6qUBajWiWo3o85Oo3xdiu3VdGMMwDMMwDMMwDGORX/6t8VTXxHg3AAAAAElFTkSuQmCC"/>
+                            </defs>
+                        </svg>
+                        <p class="ml(10) mr(15) font(20) c(white) Inter Regular">Trending</p>
+                        <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="26" height="26" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_559_2766" transform="scale(0.03125)"/>
+                            </pattern>
+                            <image id="image0_559_2766" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgEAQAAACJ4248AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFgYsCcb3baAAAAMySURBVFjDvVc9SytREJ3dIiu4gqAxpjMiZoMpUkoeiomd2Cr6E/RHhBBQ/AcS/Al+gIV2LiQmioVIVLBzjaAgaYQkoBZzXjFu9vk0ZnfzngMpcu+dM2fOvXfurEIuDdzXR8r8PCGVIiWRIBoZIervl9nnZyLLIlQqpJgm4eBAUet1t9jfB0Y4DGxuAs0mXFuzCd7aAo+N+Q/MmgbkcuBGwwE+PwcyGWBmBjAMoLdXfoYhY5mMrLHt7Q3Y2ABrmsesh4eBkxMBYQa2t4Fo1L1/NArs7IgvAJTL4FDIZebxOHB/L463t8DkpP/tSyYByxKsahUcj3cIHgo5wUsl8NCQ7z1skRgYAEzTIdFGCaCnx5G9UAAHAp3BxTqrGggAhYKT2BdnAsjlWrLz4KC77NwREBLBoGwpAF5f/wsoHJbTzuxlz70QkPXJpMR4fQVGR/+Y2NwUqO1tt2B+CIgSu7vilc+/D/T1SZFh9nLVfBNALCbb0GiAdZ2A5WW7yHgB8ktAkr64EM/FRZWQSsnw/r5XIN+m2LHSaVUeFiKiYvHHCNixkEiohEhE/jw+/hyBhwdRIhIhuRIAWNe9wrTeHI8VE6zr4vjyojrDiuI9k+trcT068kZCdeKCazXJYnzcswIcDAKXl+J/cwOEw+6Ui0ZFgacnAs7O5I99G/4/CSCdlvWnpyqhUpHhqSk/BBS1ViPMzhJdXZFiGATT7ExielqcKxUClpb8FiK/SrQKES8sdFWKPwMPDQFXV5LQ6urX8r+XYtTrQG/vu+PWlgzu7HRDwCGxstJ2Hnt7Hx4jcRobkwaSGUgmuyXRPvivX/b9h10AncmNDZm0LHAw+M+DczAI3N1JjLW1LxZoGlAue2nJ3AcPBIBiUbCPj9tiS1NarTq9m8tW+lvZXTalDol43CFxe9vNmZA9t2WvVoGJCZeShUJAqdT6MOHdXSAWcx84FnNOuy27xxYfrGng9fXWawlACkg2K6XUMMC6Li+bYchYNut0O4D4rq11dZ6A0VEgn//4jdjJ6nUgn/901b4w108wWNdJmZsjSqcJiQQpkciHz3NYFikXFwTTJOXwUFGaTTe4vwHvCd68eFNxnAAAAABJRU5ErkJggg=="/>
+                            </defs>
+                        </svg>
+                        <p class="ml(10) font(20) c(white) Inter Regular">Recent</p> 
                     </div>
-                    <div class="vbox ">
-                        <p class=" c(#ACACAC) font(15) Inter Medium">3분전</p>
-                        <div class="hbox">
-                            <div class=" hbox bg(#4B4B4B) h(35) w(100) r(30) p(10)">
-                                
+                    
+                
 
+                    <div class="hbox pack w(110) h(40) bg(linear-gradient(92.34deg,#7350ec/0%,#7b63d9/20.31%,#9558db/50.52%,#ad71e7/78.12%,#d5c8fe.88/98.96%)) r(9)">           
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="20" height="20" fill="url(#pattern0)"/>
+                            <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_559_2771" transform="scale(0.0416667)"/>
+                            </pattern>
+                            <image id="image0_559_2771" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYEAQAAAAa7ikwAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cIFwAbGxl4pwsAAALGSURBVEjHtZVPSNNhGMef3+YmIkQEkqjMg52EFUl3y0AQuoh/KClvIxS7JGM3GUwKT4UNh4geOusQPBR40f7gRdsgBg4dmh7cWLNBkMXs+XR4ybU2bZa9px/v+3s+39/zPN/n/Yn8h4WeOwdjY7C9fbZgbDa0vx/29gBgff0M4TduQDTK0fr6FcJh27+Dm5ogHBaZnRVyObP74YPI/LxILPbXAlBdDX6/SDQqkk6LBAJiXb0qcngo0tcnUlcnEov9BdhuRz0eSCbh5Utobkbv34dcDgD1es17Hz+ily+fEn79OhqJQDyO9vSIiBj4/j7E4/DiBVgW1NZCLodWVpYHVpcLnj83IJ8PdTqN4MOHZi8UMhnV1pr9trayHPSzzvD5M0xOojU1eVGvF1IptLsbslm4eTMf9+ABOjd3AvgXP+viIup2F577fJBMoteuGWuOjBSeh0IQCJRd58Jzv98MUnMzOjUFS0tgtxe+8+oV3L5dVp0LAwMB2NlBL12C3l5IpaCurrhn6fRR1ifVOQ+2LHjyBLa3zWA1NcGnT2h7ezH84sUCB6GJBHz/DsPDpb/asiAYhI0N1OVCKythbQ199Kh0iX9zEOp2w+PH6OamKc/MDHR0oA4H2GwwOQnr61BfbwDj4/DmDVpRUVJAh4bM1VFSvaUlL5bJoCsrEIvl/d3ZaSbU5TregRMTxzqoSEwjERgczJtgfx+6uk6OW16GO3f+KGCgHg+8fm2evV5z32Qyv5axtIPKvIPg/Hn48sW4JhiE0VFTxrdv4fCwsGdOZ5GDRKTiJAHLymZhYUHk7l2RxkYhGhVxOMRyu0VaW0UODkR6eoRnz8S6cEFYXRVJJCzbt29lZWBSvnXLNP39e/TePdjdhYGBYw3C8HDZcCPgcJiJVYWtLXR6+lSA8nrx9Kn5mbx7B1VVZy+gV66giQTa0HDa2B/eyKeXlAkgsQAAAABJRU5ErkJggg=="/>
+                            </defs>
+                        </svg>
+                        <p class="c(white) Inter Regular font(20) ml(10)">Post</p>
+                    
+                    </div>
+                </div>
 
-                                <p class="c(white) ml(10)">1,124</p>
-                            </div>
-                            <div class=" hbox bg(#4B4B4B) h(35) w(100) r(30) p(10) ml(20)">
-                                
-
+                <div class="w(1000) h(250) bg(#2C2C2C) r(10) p(20)">
+                    <div class="hbox">
+                        <div class="w(55) h(55) r(50) bg(#D9D9D9) "></div>
+                        <div class="vbox gap(15) ml(15)">
+                            <p class=" c(#ACACAC) font(20) Inter Medium">name</p>
+                            <p class="c(white) font(25) Inter Medium">tittle</p>
+                            <p class="c(#ACACAC) font(20) Inter Medium">본문...</p>
+                        </div>
+                        <div class="vbox ">
+                            <p class=" c(#ACACAC) font(15) Inter Medium">3분전</p>
+                            <div class="hbox">
+                                <div class=" hbox bg(#4B4B4B) h(35) w(100) r(30) p(10)">
                                     
-                                <p class="c(white) ml(10)">29</p>
-                            </div>
 
+
+                                    <p class="c(white) ml(10)">1,124</p>
+                                </div>
+                                <div class=" hbox bg(#4B4B4B) h(35) w(100) r(30) p(10) ml(20)">
+                                    
+
+                                        
+                                    <p class="c(white) ml(10)">29</p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="w(1000) h(500) bg(#2C2C2C) r(10)"></div>
+                <div class="w(1000) h(300) bg(#2C2C2C) r(10)"></div>
+
+
+            </div>
+        
+        </div> -->
+
+
+        <div class=" vbox h(100%) w(100%) bg(black) pack gap(10)">
+            <p class=" mt(300) x(50%) y(100) c(white) font(60) Inter Semi Bold">FAQ</p>
+            <input type="text" class="b(0) w(600) h(60) bg(#2C2C2C) r(10) ">
+            <p class="c(white) font(20) Inter Regular ">Have questions? We’re here to help.</p>
+
+            <div class="w(1000) h(900) bg(#2C2C2C) r(10) vbox scroll pt(40) pl(60) pr(40) gap(20)">
+                <div class="hbox space-between">
+                    <div class="vbox" onclick="toggleResponse()">
+                        <div class="c(white) font(25) Inter Bold "><p>Question?</p></div>
+                        <div class="c(#ACACAC) font(20) Inter Medium response">response..</div>
+                    </div>
+                    <svg width="25" height="2" viewBox="0 0 38 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="38" y2="1" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="w(900) h(1) bg(#BABABA)"></div>
+                <div class="hbox space-between">
+                    <div class="vbox" onclick="toggleResponse()">
+                        <div class="c(white) font(25) Inter Bold "><p>Question?</p></div>
+                        <div class="c(#ACACAC) font(20) Inter Medium response">response..</div>
+                    </div>
+                    <svg width="25" height="2" viewBox="0 0 38 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="38" y2="1" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="w(900) h(1) bg(#BABABA)"></div>
+                <div class="hbox space-between">
+                    <div class="vbox" onclick="toggleResponse()">
+                        <div class="c(white) font(25) Inter Bold "><p>Question?</p></div>
+                        <div class="c(#ACACAC) font(20) Inter Medium response">response..</div>
+                    </div>
+                    <svg width="25" height="2" viewBox="0 0 38 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="1" x2="38" y2="1" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="w(900) h(1) bg(#BABABA)"></div>
+
+
             </div>
 
-            <div class="w(1000) h(500) bg(#2C2C2C) r(10)"></div>
-            <div class="w(1000) h(300) bg(#2C2C2C) r(10)"></div>
-
+            
 
         </div>
-      
+
+
     </div>
-
-
-
-
-</div>
