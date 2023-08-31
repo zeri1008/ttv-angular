@@ -15,6 +15,10 @@ const routes: Routes = [
     component: RoutePlaygroundComponent,
   },
   {
+    path: 'playground/:tab',
+    component: RoutePlaygroundComponent,
+  },
+  {
     path: 'gallery',
     component: RouteGalleryComponent,
   },
