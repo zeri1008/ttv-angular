@@ -1,11 +1,31 @@
 .right-sidebar {
   /* 사이드바 스타일을 지정하세요 */
-  position: fixed; /* 사이드바를 고정시킴 */
-  top: 65px; /* 맨 위에 고정 */
-  right: 0; /* 오른쪽에 고정 */
-  width: 400px; /* 사이드바 너비를 조정 */
+  position: absolute; /* 사이드바를 고정시킴 */
+  top: 0px; /* 맨 위에 고정 */
+  right: 0px; /* 오른쪽에 고정 */
+  width: 330px; /* 사이드바 너비를 조정 */
   height: 100%; /* 사이드바 높이를 100%로 설정하여 컨테이너 높이에 맞춤 */
   background-color: #000000; /* 원하는 배경색으로 변경 */
   /* 기타 스타일 속성을 추가하세요 */
-  border-left: 1px solid #ddd; /* 페이지와 사이드바 구분선 추가 */
+  border-left: 1px solid #4b4b4b; /* 페이지와 사이드바 구분선 추가 */
+}
+
+input:focus {
+  outline: none; /* 포커스시 아웃라인 제거 */
+  box-shadow: none; /* 포커스시 박스 쉐도우 제거 */
+}
+
+textarea:focus {
+  outline: none; /* 포커스시 아웃라인 제거 */
+  box-shadow: none; /* 포커스시 박스 쉐도우 제거 */
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
