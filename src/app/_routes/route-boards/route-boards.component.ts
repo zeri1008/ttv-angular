@@ -12,4 +12,11 @@ export class RouteBoardsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleResponse() {
+    const response = document.querySelector('.response');
+    if (response) {
+      response.classList.toggle('hidden');
+    }
+  }
+
 }

@@ -1,19 +1,12 @@
-<div class="right-sidebar ">
-  <div class="vbox gap(30) w(100%) h(100%) p(30)">
-    <div
-      class="w(300) h(60) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(25) Inter semi bold c(white) pack"
-    >
-      <p>Generate</p>
-    </div>
-    <div class="w(75) h(30) font(25) Inter semi bold c(white)">
-      <p>Model</p>
-    </div>
-    <div class="h(40)">
+<div class="right-sidebar scroll-y">
+  <div class="vbox w(100%) h(100%)">
+    <div class="w(100%) p(5/15)">
+      <p class="font(18) c(#A3A3A3)">Model</p>
       <form>
         <select
-          class="bg(#4B4B4B) w(300) h(50) r(10) font(15) bold c(white) p(8)"
+          class="bg(#4B4B4B) w(300) h(35) r(6) font(15) bold c(white) p(8)"
         >
-          <option value="none"><p>==선택==</p></option>
+          <option value="none"><p>MidJourney V4</p></option>
           <option value="one"><p>1</p></option>
           <option value="two"><p>2</p></option>
           <option value="three"><p>3</p></option>
@@ -21,87 +14,97 @@
       </form>
     </div>
 
-    <div class="font(25) Inter semi bold c(white)"><p>Prompt</p></div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(300) h(150) bg(#4B4B4B) r(10) b(0)"
-    />
-    <div class=" font(25) Inter semi bold c(white)">
-      <p>Negative prompt</p>
+    <div class="bt(1/grey) bb(1/grey) p(5/15)">
+      <div class="font(16) c(white)"><p>> Prompt</p></div>
+      <textarea
+        type="text"
+        class="font(15) c(white) w(300) h(130) bg(#4B4B4B) r(6) p(8) b(1/grey)"
+      ></textarea>
+      <div class="font(16) c(white)">
+        <p>> Negative prompt</p>
+      </div>
+      <textarea
+        type="text"
+        class="font(15) c(white) w(300) h(35) bg(#4B4B4B) r(6) p(8) b(1/grey)"
+      ></textarea>
     </div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(300) h(150) bg(#4B4B4B) r(10)  b(0)"
-    />
-    <div class="font(25) Inter semi bold c(white)">
-      <p>Guidance Scales</p>
-    </div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10)  b(0)"
-    />
-    <div class=" font(25) Inter semi bold c(white)">
-      <p>Steps</p>
-    </div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(50) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
-    />
-    <div class="font(25) Inter semi bold c(white)">
-      <p>Scheduler</p>
-    </div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10) b(0)"
-    />
-    <div class="w(62) h(30) font(25) Inter semi bold c(white)">
-      <p>Seed</p>
-    </div>
-    <input
-      type="text"
-      class="font(20) c(white) Inter semi bold w(300) h(50) bg(#4B4B4B) r(10)  b(0)"
-    />
-    <div class="w(316) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
-      <p>Size (min:512, max:1024)</p>
-    </div>
-    <div class="hbox mb(30)">
-      <div class="w(76) h(29) ml(85) mt(12) font(25) Inter semi bold c(white)">
-        <p>width:</p>
+    <div class="pl(15) bb(1/grey)">
+      <p class="font(20) c(#A3A3A3)">Settings</p>
+      <div class="font(16) c(white)">
+        <p>> Guidance Scales</p>
+      </div>
+      <input
+        type="number"
+        class="font(15) c(white) w(300) h(35) bg(#4B4B4B) r(6) p(8) b(1/grey)"
+      />
+      <div class="font(16) c(white)">
+        <p>> Steps</p>
+      </div>
+      <input
+        type="number"
+        class="font(15) c(white) w(300) h(35) bg(#4B4B4B) r(6) p(8) b(1/grey)"
+      />
+      <div class="font(16) c(white)">
+        <p>> Scheduler</p>
       </div>
       <input
         type="text"
-        class="w(128) h(46) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+        class="font(15) c(white) w(300) h(35) bg(#4B4B4B) r(6) p(8) b(1/grey)"
       />
-      <div class="w(85) h(29) ml(20) mt(12) font(25) Inter semi bold c(white)">
-        <p>height:</p>
+      <div class="w(62) h(30) font(16) c(white)">
+        <p>> Seed</p>
       </div>
       <input
-        type="text"
-        class="w(128) h(46) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+        type="number"
+        class="font(15) c(white) w(300) h(35) bg(#4B4B4B) r(6) p(8) b(1/grey)"
       />
-
+      <div class="w(316) h(30) font(16) c(white)">
+        <p>> Size</p>
+      </div>
+      <div class="hbox mb(10)">
+        <div class="w(50) h(28) font(16) c(white)">
+          <p>width</p>
+        </div>
+        <input
+          type="number"
+          class="w(90) h(35) font(15) c(white) bg(#4B4B4B) r(10) b(1/grey) p(8)"
+          value="512"
+        />
+        <div class="w(55) h(30) ml(15) font(16) c(white)">
+          <p>height</p>
+        </div>
+        <input
+          type="number"
+          class="w(90) h(35) font(15) c(white) bg(#4B4B4B) r(10) b(1/grey) p(8)"
+          value="512"
+        />
+      </div>
+    </div>
+    <div
+      class="w(300) h(50) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(6) font(18) bold c(white) pack pointer m(15)"
+    >
+      <p>Generate</p>
+    </div>
   </div>
-</div>
 
-
-<!-- <div
+  <!-- <div
   class="bg(#1A1A1A) absolute(~0,0) vbox gap(30) w(100%) h(800) scrollbar scroll-y"
 >
   <div
-    class="w(455) h(66) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(30) Inter semi bold c(white) pack"
+    class="w(455) h(66) bg(linear-gradient(180deg,#744efc/0%,#8233ca/100%)) r(10) font(30)  c(white) pack"
   >
     <p>Generate</p>
   </div>
 
   <div>
-    <div class="w(75) h(30) font(25) Inter semi bold c(white)">
+    <div class="w(75) h(30) font(18)  c(white)">
       <p>Model</p>
     </div>
     <div class="h(47)">
       <form>
         <select
           name="Appia"
-          class="bg(#4B4B4B) w(455) h(47) r(10) font(20) Inter semi bold c(white) b(0)"
+          class="bg(#4B4B4B) w(455) h(47) r(10) font(18)  c(white) b(0)"
         >
           <option value="none"><p>==선택==</p></option>
           <option value="one"><p>1</p></option>
@@ -113,84 +116,85 @@
   </div>
 
   <div>
-    <div class="w(90) h(30) font(25) Inter semi bold c(white)">
+    <div class="w(90) h(30) font(18)  c(white)">
       <p>Prompt</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) ml(85) mt(13) r(10) b(0)"
+      class="font(18) c(white)  w(455) h(186) bg(#4B4B4B) ml(85) mt(13) r(10) b(0)"
     />
   </div>
 
   <div>
-    <div class="ml(85) mt(23) font(25) Inter semi bold c(white)">
+    <div class="ml(85) mt(23) font(18)  c(white)">
       <p>Negative prompt</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(186) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+      class="font(18) c(white)  w(455) h(186) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
     />
   </div>
 
   <div>
-    <div class="w(188) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+    <div class="w(188) h(30) ml(85) mt(30) font(18)  c(white)">
       <p>Guidance Scales</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+      class="font(18) c(white)  w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
     />
   </div>
 
   <div>
-    <div class="w(70) h29 ml(85) mt(30) font(25) Inter semi bold c(white)">
+    <div class="w(70) h29 ml(85) mt(30) font(18)  c(white)">
       <p>Steps</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+      class="font(18) c(white)  w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
     />
   </div>
 
   <div>
-    <div class="w(124) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+    <div class="w(124) h(30) ml(85) mt(30) font(18)  c(white)">
       <p>Scheduler</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+      class="font(18) c(white)  w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
     />
   </div>
 
   <div>
-    <div class="w(62) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+    <div class="w(62) h(30) ml(85) mt(30) font(18)  c(white)">
       <p>Seed</p>
     </div>
     <input
       type="text"
-      class="font(20) c(white) Inter semi bold w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
+      class="font(18) c(white)  w(455) h(46) bg(#4B4B4B) r(10) ml(85) mt(12) b(0)"
     />
   </div>
 
   <div>
-    <div class="w(316) h(30) ml(85) mt(30) font(25) Inter semi bold c(white)">
+    <div class="w(316) h(30) ml(85) mt(30) font(18)  c(white)">
       <p>Size (min:512, max:1024)</p>
     </div>
     <div class="hbox mb(30)">
-      <div class="w(76) h(29) ml(85) mt(12) font(25) Inter semi bold c(white)">
+      <div class="w(76) h(29) ml(85) mt(12) font(18)  c(white)">
         <p>width:</p>
       </div>
       <input
         type="text"
-        class="w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+        class="w(128) h(46) ml(10) mt(12) font(18)  c(white) bg(#4B4B4B) r(10) b(0)"
       />
-      <div class="w(85) h(29) ml(20) mt(12) font(25) Inter semi bold c(white)">
+      <div class="w(85) h(29) ml(18) mt(12) font(18)  c(white)">
         <p>height:</p>
       </div>
       <input
         type="text"
-        class="w(128) h(46) ml(10) mt(12) font(20) Inter semi bold c(white) bg(#4B4B4B) r(10) b(0)"
+        class="w(128) h(46) ml(10) mt(12) font(18)  c(white) bg(#4B4B4B) r(10) b(0)"
       />
     </div>
   </div>
 </div> -->
+</div>

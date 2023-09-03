@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TextToImageComponent } from './text-to-image.component';
+import { TextToPicassoComponent } from './text-to-picasso.component';
 import { ImgRightbarComponent } from '../img-rightbar/img-rightbar.component';
 
 @NgModule({
-  declarations: [TextToImageComponent],
+  declarations: [TextToPicassoComponent, ImgRightbarComponent],
   imports: [CommonModule],
-  exports: [TextToImageComponent],
+  exports: [TextToPicassoComponent],
 })
-export class TextToImageModule {}
+export class TextToPicassoModule {}

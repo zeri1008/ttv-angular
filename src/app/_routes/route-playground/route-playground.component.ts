@@ -1,12 +1,21 @@
-import { Component, ViewChild, OnInit, AfterViewInit, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  OnInit,
+  AfterViewInit,
+  ViewContainerRef,
+  ComponentFactoryResolver,
+} from '@angular/core';
 import { ComponentType } from '@angular/cdk/overlay';
 import { Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
 import { PlaygroundHomeComponent } from './playground-home/playground-home.component';
+import { TextToImageComponent } from 'src/app/_components/text-to-image/text-to-image.component';
+import { TextToPicassoComponent } from 'src/app/_components/text-to-picasso/text-to-picasso.component';
 
 @Component({
   selector: 'app-route-playground',
   templateUrl: './route-playground.component.html',
-  styleUrls: ['./route-playground.component.scss']
+  styleUrls: ['./route-playground.component.scss'],
 })
 export class RoutePlaygroundComponent implements OnInit, AfterViewInit {
   @ViewChild('content', { read: ViewContainerRef, static: false })
@@ -24,7 +33,8 @@ export class RoutePlaygroundComponent implements OnInit, AfterViewInit {
   ) {
     this._tabs = {
       '/playground': PlaygroundHomeComponent,
-      '/playground/interactiv': PlaygroundHomeComponent
+      '/playground/textToImage': TextToImageComponent,
+      '/playground/textToPicasso': TextToPicassoComponent,
     };
 
     this.router.events.subscribe((event: RouterEvent) => {
@@ -32,10 +42,9 @@ export class RoutePlaygroundComponent implements OnInit, AfterViewInit {
         this._currentRoute = event.url;
       }
     });
-   }
-
-  ngOnInit(): void {
   }
+
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     this.renderContent();
