@@ -10,6 +10,7 @@ import { ComponentType } from '@angular/cdk/overlay';
 import { Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
 import { PlaygroundHomeComponent } from './playground-home/playground-home.component';
 import { TextToImageComponent } from 'src/app/_components/text-to-image/text-to-image.component';
+import { TextToPicassoComponent } from 'src/app/_components/text-to-picasso/text-to-picasso.component';
 
 @Component({
   selector: 'app-route-playground',
@@ -33,6 +34,7 @@ export class RoutePlaygroundComponent implements OnInit, AfterViewInit {
     this._tabs = {
       '/playground': PlaygroundHomeComponent,
       '/playground/textToImage': TextToImageComponent,
+      '/playground/textToPicasso': TextToPicassoComponent,
     };
 
     this.router.events.subscribe((event: RouterEvent) => {
