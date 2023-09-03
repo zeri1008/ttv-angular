@@ -1,6 +1,9 @@
 <nav class="vbox w(270) h(100%) bg(black) p(20)">
-  <div class="vbox w(230) r(10) items pointer ">
-    <div class="hbox space-between w(100%) p(10)" (click)="toggleMenu('videos')">
+  <div class="vbox w(230) r(10) items pointer">
+    <div
+      class="hbox space-between w(100%) p(10)"
+      (click)="toggleMenu('videos')"
+    >
       <span class="font(20) Inter c(#fff)">VIDEOS<br /></span>
       <svg
         width="13"
@@ -8,11 +11,15 @@
         viewBox="0 0 13 12"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        >
+      >
         <path d="M6.5 12L0.00480938 0.75L12.9952 0.75L6.5 12Z" fill="white" />
       </svg>
     </div>
-    <div class="vbox(left) w(100%) ml(30) gap(3)" #VideoList *ngIf="isMenuOpen && menuType === 'videos'">
+    <div
+      class="vbox(left) w(100%) ml(30) gap(3)"
+      #VideoList
+      *ngIf="isMenuOpen && menuType === 'videos'"
+    >
       <li class="color(grey) font(18)" style="list-style: none">
         - Text to Video
       </li>
@@ -23,7 +30,10 @@
   </div>
 
   <div class="vbox w(230) r(10) items pointer">
-    <div class="hbox space-between w(100%) p(10)" (click)="toggleMenu('images')">
+    <div
+      class="hbox space-between w(100%) p(10)"
+      (click)="toggleMenu('images')"
+    >
       <span class="font(20) Inter c(#fff)">IMAGES<br /></span>
       <svg
         width="13"
@@ -35,11 +45,23 @@
         <path d="M6.5 12L0.00480938 0.75L12.9952 0.75L6.5 12Z" fill="white" />
       </svg>
     </div>
-    <div class="vbox(left) w(100%) ml(30) gap(3)" #ImageList *ngIf="isMenuOpen && menuType === 'images'">
-      <li class="color(grey) font(18)" style="list-style: none">
+    <div
+      class="vbox(left) w(100%) ml(30) gap(3)"
+      #ImageList
+      *ngIf="isMenuOpen && menuType === 'images'"
+    >
+      <li
+        class="color(grey) font(18)"
+        style="list-style: none"
+        (click)="onClickRouter('playground/textToImage')"
+      >
         - Text to Image
       </li>
-      <li class="color(grey) font(18)" style="list-style: none">
+      <li
+        class="color(grey) font(18)"
+        style="list-style: none"
+        (click)="onClickRouter('playground/textToPicasso')"
+      >
         - Text to Picasso
       </li>
       <li class="color(grey) font(18)" style="list-style: none">
